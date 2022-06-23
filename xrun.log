@@ -1,0 +1,573 @@
+xrun(64): 21.09-s007: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	21.09-s007: Started on Jun 20, 2022 at 12:13:26 UTC
+xrun
+	-uvm
+	r_top.sv
+	-gui
+	-access +rw
+Recompiling... reason: file './r_driver.sv' is newer than expected.
+	expected: Wed Jun 15 06:28:29 2022
+	actual:   Mon Jun 20 12:13:22 2022
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /apps/cadence/XCELIUM/21.09.007/tools/methodology/UVM/CDNS-1.1d
+file: r_top.sv
+     	uvm_config_db#(virtual s_interface)::get(this, "" , "s_interface" , sinf);
+     	                                       |
+xmvlog: *W,FUNTSK (s_monitor.sv,17|45): function called as a task without void'().
+(`include file: r_pkg.sv line 25, file: r_top.sv line 1)
+	uvm_config_db#(virtual h_interface)::get(this , "" , "h_interface" , hinf);
+	                                       |
+xmvlog: *W,FUNTSK (h_monitor.sv,28|40): function called as a task without void'().
+(`include file: r_pkg.sv line 25, file: r_top.sv line 1)
+	   uvm_config_db#(virtual h_interface)::get(this , "" , "h_interface", hinf);
+	                                          |
+xmvlog: *W,FUNTSK (r_driver.sv,13|43): function called as a task without void'().
+(`include file: r_pkg.sv line 25, file: r_top.sv line 1)
+      	   uvm_config_db#(virtual s_interface)::get(this , "" , "s_interface", sinf);
+      	                                          |
+xmvlog: *W,FUNTSK (s_driver.sv,16|49): function called as a task without void'().
+(`include file: r_pkg.sv line 25, file: r_top.sv line 1)
+	package worklib.r_pkg:sv
+		errors: 0, warnings: 4
+	module worklib.r_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		r_pkg
+		r_top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.r_top:sv <0x7eddcba3>
+			streams: 744, words: 844370
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    5       2
+		Verilog packages:              5       5
+		Registers:                 14350   10276
+		Scalar wires:                 26       -
+		Vectored wires:               37       -
+		Named events:                  4      12
+		Always blocks:                 9       9
+		Initial blocks:              301     162
+		Parallel blocks:              28      29
+		Cont. assignments:             5      13
+		Pseudo assignments:           42      42
+		Assertions:                    9       9
+		SV Class declarations:       203     316
+		SV Class specializations:    394     394
+	Writing initial simulation snapshot: worklib.r_top:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /apps/cadence/XCELIUM/21.09.007/tools/xcelium/files/xmsimrc
+xcelium> source /apps/cadence/XCELIUM/21.09.007/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm r_top.hinf[3].clk r_top.hinf[3].reset_n r_top.hinf[3].ack r_top.hinf[3].rd r_top.hinf[3].wr r_top.hinf[2].clk r_top.hinf[2].reset_n r_top.hinf[2].ack r_top.hinf[2].rd r_top.hinf[2].wr r_top.hinf[1].clk r_top.hinf[1].reset_n r_top.hinf[1].ack r_top.hinf[1].rd r_top.hinf[1].wr r_top.hinf[1].addr r_top.hinf[1].be r_top.hinf[1].cpu r_top.hinf[1].drd r_top.hinf[1].dwr r_top.hinf[0].clk r_top.hinf[0].reset_n r_top.hinf[0].ack r_top.hinf[0].rd r_top.hinf[0].wr r_top.hinf[0].addr r_top.hinf[0].be r_top.hinf[0].cpu r_top.hinf[0].drd r_top.hinf[0].dwr r_top.sinf.clk r_top.sinf.reset_n r_top.sinf.ack_bus r_top.sinf.rd_bus r_top.sinf.wr_bus r_top.sinf.add_bus r_top.sinf.byte_en r_top.sinf.cpu_out r_top.sinf.data_bus_rd r_top.sinf.data_bus_wr r_top.hinf[3].addr r_top.hinf[3].be r_top.hinf[3].cpu r_top.hinf[3].drd r_top.hinf[3].dwr r_top.hinf[2].dwr r_top.hinf[2].drd r_top.hinf[2].cpu r_top.hinf[2].be r_top.hinf[2].addr
+Created probe 1
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (21.09-s007)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test r_test...
+stop -create -name Randomize -randomize
+Created stop Randomize
+
+UVM_INFO s_driver.sv(42) @ 95: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             7 --------rpt   21cf27fe------ addres
+UVM_INFO s_monitor.sv(43) @ 95: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h21cf27fe
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h5ea18a31
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h12153524
+  cpu          integral       1     'h0       
+  be           integral       4     'h0       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 95: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  12153524 dta_rd   21cf27fe addr           9 counter
+UVM_INFO h_monitor.sv(49) @ 105: uvm_test_top.env.h_agent_expected[1].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7626     
+  addr         integral       32    'h21cf27fe
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h5ea18a31
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h12153524
+  cpu          integral       1     'h0       
+  be           integral       4     'h0       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 105: uvm_test_top.env.h_agent_expected[1].h_mon_expected [monhh]  12153524 drd  21cf27fe addr 
+UVM_INFO r_scoreboard.sv(77) @ 105: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd  303379748  data bus rd  s   303379748 
+------: [0]---------
+------: [1]---------
+------: [0]---------
+------: [0]---------
+UVM_INFO s_driver.sv(42) @ 145: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             4 --------rpt   3d8aa866------ addres
+UVM_INFO s_monitor.sv(43) @ 145: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h3d8aa866
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h285b6aea
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'hc0895e81
+  cpu          integral       1     'h0       
+  be           integral       4     'he       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 145: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  c0895e81 dta_rd   3d8aa866 addr           9 counter
+UVM_INFO h_monitor.sv(49) @ 155: uvm_test_top.env.h_agent_expected[2].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7615     
+  addr         integral       32    'h3d8aa866
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h285b6aea
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'hc0895e81
+  cpu          integral       1     'h0       
+  be           integral       4     'he       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 155: uvm_test_top.env.h_agent_expected[2].h_mon_expected [monhh]  c0895e81 drd  3d8aa866 addr 
+UVM_INFO r_scoreboard.sv(77) @ 155: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd 3230228097  data bus rd  s  3230228097 
+------: [0]---------
+------: [0]---------
+------: [1]---------
+------: [0]---------
+UVM_INFO s_driver.sv(42) @ 195: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             4 --------rpt   56a60cb0------ addres
+UVM_INFO s_monitor.sv(43) @ 195: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h56a60cb0
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'hf1c1669c
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h8484d609
+  cpu          integral       1     'h0       
+  be           integral       4     'h8       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 195: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  8484d609 dta_rd   56a60cb0 addr          14 counter
+UVM_INFO h_monitor.sv(49) @ 205: uvm_test_top.env.h_agent_expected[3].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7604     
+  addr         integral       32    'h56a60cb0
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'hf1c1669c
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h8484d609
+  cpu          integral       1     'h0       
+  be           integral       4     'h8       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 205: uvm_test_top.env.h_agent_expected[3].h_mon_expected [monhh]  8484d609 drd  56a60cb0 addr 
+UVM_INFO r_scoreboard.sv(77) @ 205: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd 2223298057  data bus rd  s  2223298057 
+------: [0]---------
+------: [0]---------
+------: [0]---------
+------: [1]---------
+UVM_INFO s_driver.sv(42) @ 235: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             3 --------rpt   7fcc07d2------ addres
+UVM_INFO s_monitor.sv(43) @ 235: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h7fcc07d2
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h94471bad
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'hb1f05663
+  cpu          integral       1     'h0       
+  be           integral       4     'hd       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 235: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  b1f05663 dta_rd   7fcc07d2 addr          15 counter
+UVM_INFO h_monitor.sv(49) @ 245: uvm_test_top.env.h_agent_expected[0].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7637     
+  addr         integral       32    'h7fcc07d2
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h94471bad
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'hb1f05663
+  cpu          integral       1     'h0       
+  be           integral       4     'hd       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 245: uvm_test_top.env.h_agent_expected[0].h_mon_expected [monhh]  b1f05663 drd  7fcc07d2 addr 
+UVM_INFO r_scoreboard.sv(77) @ 245: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd 2985317987  data bus rd  s  2985317987 
+------: [1]---------
+------: [0]---------
+------: [0]---------
+------: [0]---------
+UVM_INFO s_monitor.sv(43) @ 325: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h29d39e7b
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'h8f3889e8
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'hb1f05663
+  cpu          integral       1     'h0       
+  be           integral       4     'h7       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 325: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  b1f05663 dta_rd   29d39e7b addr          44 counter
+UVM_INFO h_monitor.sv(49) @ 335: uvm_test_top.env.h_agent_expected[1].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7626     
+  addr         integral       32    'h29d39e7b
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'h8f3889e8
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'hb1f05663
+  cpu          integral       1     'h0       
+  be           integral       4     'h7       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 335: uvm_test_top.env.h_agent_expected[1].h_mon_expected [monhh]  b1f05663 drd  29d39e7b addr 
+UVM_INFO r_scoreboard.sv(56) @ 335: uvm_test_top.env.scb [compare] Test_wr: OK!
+addres h  701734523  addres s   701734523 
+------: [0]---------
+------: [1]---------
+------: [0]---------
+------: [0]---------
+UVM_INFO s_monitor.sv(43) @ 455: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h471ecccb
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'h4b179396
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'hb1f05663
+  cpu          integral       1     'h0       
+  be           integral       4     'h6       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 455: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  b1f05663 dta_rd   471ecccb addr          77 counter
+UVM_INFO h_monitor.sv(49) @ 465: uvm_test_top.env.h_agent_expected[2].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7615     
+  addr         integral       32    'h471ecccb
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'h4b179396
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'hb1f05663
+  cpu          integral       1     'h0       
+  be           integral       4     'h6       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 465: uvm_test_top.env.h_agent_expected[2].h_mon_expected [monhh]  b1f05663 drd  471ecccb addr 
+UVM_INFO r_scoreboard.sv(56) @ 465: uvm_test_top.env.scb [compare] Test_wr: OK!
+addres h 1193200843  addres s  1193200843 
+------: [0]---------
+------: [0]---------
+------: [1]---------
+------: [0]---------
+UVM_INFO s_driver.sv(42) @ 485: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             2 --------rpt   f7da9874------ addres
+UVM_INFO s_monitor.sv(43) @ 485: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'hf7da9874
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h97925d1 
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h6b97b0d 
+  cpu          integral       1     'h0       
+  be           integral       4     'hd       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 485: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  06b97b0d dta_rd   f7da9874 addr          20 counter
+UVM_INFO h_monitor.sv(49) @ 495: uvm_test_top.env.h_agent_expected[3].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7604     
+  addr         integral       32    'hf7da9874
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h97925d1 
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h6b97b0d 
+  cpu          integral       1     'h0       
+  be           integral       4     'hd       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 495: uvm_test_top.env.h_agent_expected[3].h_mon_expected [monhh]  06b97b0d drd  f7da9874 addr 
+UVM_INFO r_scoreboard.sv(77) @ 495: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd  112818957  data bus rd  s   112818957 
+------: [0]---------
+------: [0]---------
+------: [0]---------
+------: [1]---------
+UVM_INFO s_monitor.sv(43) @ 535: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h87d07e4e
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'hc4de1b64
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'h6b97b0d 
+  cpu          integral       1     'h0       
+  be           integral       4     'h4       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 535: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  06b97b0d dta_rd   87d07e4e addr          39 counter
+UVM_INFO h_monitor.sv(49) @ 545: uvm_test_top.env.h_agent_expected[0].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7637     
+  addr         integral       32    'h87d07e4e
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'hc4de1b64
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'h6b97b0d 
+  cpu          integral       1     'h0       
+  be           integral       4     'h4       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 545: uvm_test_top.env.h_agent_expected[0].h_mon_expected [monhh]  06b97b0d drd  87d07e4e addr 
+UVM_INFO r_scoreboard.sv(56) @ 545: uvm_test_top.env.scb [compare] Test_wr: OK!
+addres h 2278587982  addres s  2278587982 
+------: [1]---------
+------: [0]---------
+------: [0]---------
+------: [0]---------
+UVM_INFO s_driver.sv(42) @ 615: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             7 --------rpt   f898e7e4------ addres
+UVM_INFO s_monitor.sv(43) @ 615: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'hf898e7e4
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h665792d2
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h46df998d
+  cpu          integral       1     'h0       
+  be           integral       4     'h6       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 615: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  46df998d dta_rd   f898e7e4 addr          71 counter
+UVM_INFO h_monitor.sv(49) @ 625: uvm_test_top.env.h_agent_expected[1].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7626     
+  addr         integral       32    'hf898e7e4
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h665792d2
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h46df998d
+  cpu          integral       1     'h0       
+  be           integral       4     'h6       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 625: uvm_test_top.env.h_agent_expected[1].h_mon_expected [monhh]  46df998d drd  f898e7e4 addr 
+UVM_INFO r_scoreboard.sv(77) @ 625: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd 1189058957  data bus rd  s  1189058957 
+------: [0]---------
+------: [1]---------
+------: [0]---------
+------: [0]---------
+UVM_INFO s_driver.sv(42) @ 665: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             4 --------rpt   15e41634------ addres
+UVM_INFO s_monitor.sv(43) @ 665: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h15e41634
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h22369c80
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'hb2c28465
+  cpu          integral       1     'h0       
+  be           integral       4     'h5       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 665: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  b2c28465 dta_rd   15e41634 addr          49 counter
+UVM_INFO h_monitor.sv(49) @ 675: uvm_test_top.env.h_agent_expected[2].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7615     
+  addr         integral       32    'h15e41634
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'h22369c80
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'hb2c28465
+  cpu          integral       1     'h0       
+  be           integral       4     'h5       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 675: uvm_test_top.env.h_agent_expected[2].h_mon_expected [monhh]  b2c28465 drd  15e41634 addr 
+UVM_INFO r_scoreboard.sv(77) @ 675: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd 2999092325  data bus rd  s  2999092325 
+------: [0]---------
+------: [0]---------
+------: [1]---------
+------: [0]---------
+UVM_INFO s_driver.sv(42) @ 745: uvm_test_top.env.s_agent_actual.drv [drv_ss]  0 --------time_out             7 --------rpt   2d6fcc96------ addres
+UVM_INFO s_monitor.sv(43) @ 745: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'h2d6fcc96
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'hf9776f3d
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h89375212
+  cpu          integral       1     'h0       
+  be           integral       4     'hf       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 745: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  89375212 dta_rd   2d6fcc96 addr          87 counter
+UVM_INFO h_monitor.sv(49) @ 755: uvm_test_top.env.h_agent_expected[3].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7604     
+  addr         integral       32    'h2d6fcc96
+  ack          integral       2     'h1       
+  wr           integral       1     'h0       
+  dwr          integral       32    'hf9776f3d
+  rd           integral       1     'h1       
+  data_bus_rd  integral       32    'h89375212
+  cpu          integral       1     'h0       
+  be           integral       4     'hf       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 755: uvm_test_top.env.h_agent_expected[3].h_mon_expected [monhh]  89375212 drd  2d6fcc96 addr 
+UVM_INFO r_scoreboard.sv(77) @ 755: uvm_test_top.env.scb [compare] Test_rd: OK!
+ h drd 2302104082  data bus rd  s  2302104082 
+------: [0]---------
+------: [0]---------
+------: [0]---------
+------: [1]---------
+UVM_INFO s_monitor.sv(43) @ 865: uvm_test_top.env.s_agent_actual.s_mon_actual [s_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7592     
+  addr         integral       32    'hbef56059
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'ha7018dc5
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'h89375212
+  cpu          integral       1     'h0       
+  be           integral       4     'h7       
+----------------------------------------------
+
+UVM_INFO s_monitor.sv(76) @ 865: uvm_test_top.env.s_agent_actual.s_mon_actual [mon_ss]  89375212 dta_rd   bef56059 addr         143 counter
+UVM_INFO h_monitor.sv(49) @ 875: uvm_test_top.env.h_agent_expected[0].h_mon_expected [h_monitor] ----------------------------------------------
+Name           Type           Size  Value     
+----------------------------------------------
+r_tran         r_transaction  -     @7637     
+  addr         integral       32    'hbef56059
+  ack          integral       2     'h1       
+  wr           integral       1     'h1       
+  dwr          integral       32    'ha7018dc5
+  rd           integral       1     'h0       
+  data_bus_rd  integral       32    'h89375212
+  cpu          integral       1     'h0       
+  be           integral       4     'h7       
+----------------------------------------------
+
+UVM_INFO h_monitor.sv(52) @ 875: uvm_test_top.env.h_agent_expected[0].h_mon_expected [monhh]  89375212 drd  bef56059 addr 
+UVM_INFO r_scoreboard.sv(56) @ 875: uvm_test_top.env.scb [compare] Test_wr: OK!
+addres h 3203752025  addres s  3203752025 
+UVM_INFO /apps/cadence/XCELIUM/21.09.007/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 875: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   70
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[compare]    12
+[drv_ss]     8
+[h_monitor]    12
+[mon_ss]    12
+[monhh]    12
+[s_monitor]    12
+Simulation complete via $finish(1) at time 875 NS + 53
+/apps/cadence/XCELIUM/21.09.007/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	21.09-s007: Exiting on Jun 20, 2022 at 12:13:55 UTC  (total: 00:00:29)

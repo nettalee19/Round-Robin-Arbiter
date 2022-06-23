@@ -1,0 +1,17 @@
+s1(19Jun2022:07:51:03):  xrun -uvm r_top.sv -gui -access +rw 
+s2(19Jun2022:07:53:31):  xrun -uvm r_top.sv -gui -access +rw 
+s3(19Jun2022:07:55:36):  xrun -uvm r_top.sv -gui -access +rw 
+s4(19Jun2022:07:55:49):  xrun -uvm r_top.sv -gui -access +rw 
+s5(19Jun2022:07:56:05):  xrun -uvm r_top.sv -gui -access +rw 
+s6(19Jun2022:07:57:15):  xrun -uvm r_top.sv -gui -access +rw 
+s7(19Jun2022:07:58:12):  xrun -uvm r_top.sv -gui -access +rw 
+s8(19Jun2022:07:59:27):  xrun -uvm r_top.sv -gui -access +rw 
+s9(19Jun2022:08:04:16):  xrun -uvm r_top.sv -gui -access +rw 
+s10(19Jun2022:08:04:56):  xrun -uvm r_top.sv -gui -access +rw 
+s11(19Jun2022:08:05:38):  xrun -uvm r_top.sv -gui -access +rw 
+s12(19Jun2022:08:07:12):  xrun -uvm r_top.sv -gui -access +rw 
+s13(20Jun2022:06:22:43):  xrun -uvm r_top.sv -gui -access +rw 
+s14(20Jun2022:07:57:39):  xrun -uvm r_top.sv -gui -access +rw 
+s15(20Jun2022:08:29:23):  xrun -uvm r_top.sv -gui -access +rw 
+s16(20Jun2022:08:34:53):  xrun -uvm r_top.sv -gui -access +rw 
+s17(20Jun2022:12:13:27):  xrun -uvm r_top.sv -gui -access +rw 
